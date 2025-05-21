@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sentry Release Filter Settings</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 10px;
+      width: 300px;
+    }
+    .setting-item {
+      margin-bottom: 10px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    input[type="checkbox"] {
+      margin-right: 5px;
+    }
+    button {
+      padding: 10px 15px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <h1>Sentry Release Filter</h1>
+
+  <div class="setting-item">
+    <label for="latestReleaseValue">The latest release:</label>
+    <input type="text" id="latestReleaseValue" placeholder="e.g., cool.super.app@1.2.3">
+  </div>
+
+  <div class="setting-item">
+    <label>
+      <input type="checkbox" id="filterLatestCheckbox">
+      Filter data on latest release
+    </label>
+  </div>
+
+  <button id="applyFilter">Apply</button>
+
+  <script src="popup.js"></script>
+</body>
+</html>
